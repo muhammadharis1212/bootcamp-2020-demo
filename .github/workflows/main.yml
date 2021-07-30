@@ -31,6 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: installing surge
-        run: |
-          sudo npm install --global surge,
-          surge ./ bootcamp-2020-demo-by-haris.surge.sh $ --token {{ secrets.SURGETOKEN }}.
+        run: sudo npm install --global surge
+
+      - name: Deploying App
+        run: surge ./ bootcamp-2020-demo-by-haris.surge.sh $ --token {{ secrets.SURGETOKEN }}.
